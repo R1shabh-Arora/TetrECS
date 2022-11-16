@@ -1,7 +1,3 @@
-# TetrECS
-Introducing TetrECS a fast-paced block placement game in which you are given a 5x5 Grid and your task is to place the incoming pieces into that 5x5 grid. You Increase your score by clearing the Lines Horizontally and Vertically, you can rotate a piece, you can store a particular piece and come back to it later, the more lines you clear in one go, the more points you get, Each Piece that you play clears at least one line increases your score multiplier,  As your score goes up, so does your level, and you get less time to think, If you fail to place a block, you lose a life,  Lose 3 lives, and you’re out of the game
-
-
 Introduction
 This is a major piece of coursework worth 40% and will put into practice all the skills you have developed in the module so far into building a challenging application - but one not too dissimilar to the ECSChat application you have developed already.
 
