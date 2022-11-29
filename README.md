@@ -1,6 +1,6 @@
-# You should have Maven installed on your machine
-
 Command to run the game : mvn javafx:run
+
+# You should have Maven installed on your machine
 
 Introduction
 This is a major piece of coursework worth 40% and will put into practice all the skills you have developed in the module so far into building a challenging application - but one not too dissimilar to the ECSChat application you have developed already.
