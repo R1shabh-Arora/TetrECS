@@ -1,4 +1,4 @@
-Command to run the game : mvn javafx:run
+# Command to run the game : mvn javafx:run
 
 # You should have Maven installed on your machine
 
