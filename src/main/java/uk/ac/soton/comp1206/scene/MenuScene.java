@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
-import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 
 import org.apache.logging.log4j.LogManager;
@@ -25,7 +24,6 @@ public class MenuScene extends BaseScene {
     private static final Logger logger = LogManager.getLogger(MenuScene.class);
 
 
-    private final Multimedia multimedia = new Multimedia();
     /**
      * Create a new menu scene
      * @param gameWindow the Game Window this will be displayed in
@@ -101,8 +99,7 @@ public class MenuScene extends BaseScene {
     public void initialise() {
 
         logger.info("Playing the Menu Music");
-        multimedia.enableSound();
-        multimedia.playBackgroundMusic("menu.mp3");
+        Multimedia.playBackgroundMusic("menu.mp3");
         logger.info("The Music is been played");
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -122,14 +119,10 @@ public class MenuScene extends BaseScene {
      */
     private void startGame(ActionEvent event) {
         gameWindow.startChallenge();
-        multimedia.disableAudio();
-
     }
 
     private void startInstructionScene(ActionEvent event){
         gameWindow.startInstructionScene();
-
-
     }
 
     /**

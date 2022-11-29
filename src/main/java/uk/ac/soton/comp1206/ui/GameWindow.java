@@ -58,7 +58,7 @@ public class GameWindow {
     /**
      * The communicator to communicate to the server
      */
-    final Communicator communicator;
+    //final Communicator communicator;
 
     /**
      * Create a new GameWindow attached to the given stage with the specified width and height
@@ -82,7 +82,7 @@ public class GameWindow {
         setupDefaultScene();
 
         //Setup communicator
-        communicator = new Communicator("ws://ofb-labs.soton.ac.uk:9700");
+        //communicator = new Communicator("ws://ofb-labs.soton.ac.uk:9700");
 
         //Go to menu
         startMenu();
@@ -147,7 +147,7 @@ public class GameWindow {
      */
     public void loadScene(BaseScene newScene) {
         //Cleanup remains of the previous scene
-        cleanup();
+        // cleanup();
 
         //Create the new scene and set it up
         newScene.build();
@@ -175,15 +175,16 @@ public class GameWindow {
     public void setupDefaultScene() {
         this.scene = new Scene(new Pane(),width,height, Color.BLACK);
         stage.setScene(this.scene);
+        
     }
 
     /**
      * When switching scenes, perform any cleanup needed, such as removing previous listeners
      */
-    public void cleanup() {
-        logger.info("Clearing up previous scene");
-        communicator.clearListeners();
-    }
+    // public void cleanup() {
+    //     logger.info("Clearing up previous scene");
+    //     communicator.clearListeners();
+    // }
 
     /**
      * Get the current scene being displayed
@@ -213,9 +214,9 @@ public class GameWindow {
      * Get the communicator
      * @return communicator
      */
-    public Communicator getCommunicator() {
-        return communicator;
-    }
+    // public Communicator getCommunicator() {
+    //     return communicator;
+    // }
 
     /**
      * It is responsible for providing the WidthProperty of the Stage

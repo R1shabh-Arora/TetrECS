@@ -102,21 +102,6 @@ public class Multimedia {
     }
 
     /**
-     * Method to Disable Audio
-     */
-    public void disableAudio(){
-        backgroundPlayerInitial.stop();
-        audioEnabledProperty.set(false);
-    }
-
-    /**
-     * Method to Enable back the audio
-     */
-    public void enableSound(){
-        audioEnabledProperty.set(true);
-    }
-
-    /**
      * Getter method for the state of the audioEnabledProperty
      * @return The state of the Boolean Property
      */

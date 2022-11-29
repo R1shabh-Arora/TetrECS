@@ -12,7 +12,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import uk.ac.soton.comp1206.Multimedia;
 import uk.ac.soton.comp1206.component.PieceBoard;
 import uk.ac.soton.comp1206.game.GamePiece;
 import uk.ac.soton.comp1206.ui.GamePane;
@@ -27,9 +26,6 @@ public class InstructionsScene extends BaseScene {
 
     //Making the instance of the Logger (Helps in debugging)
     private static final Logger logger = LogManager.getLogger(MenuScene.class);
-
-
-    private final Multimedia multimedia = new Multimedia();
 
 
     /**
@@ -56,7 +52,6 @@ public class InstructionsScene extends BaseScene {
      */
     public void moveOut(){
         gameWindow.startMenu();
-        multimedia.disableAudio();
     }
     @Override
     public void build() {

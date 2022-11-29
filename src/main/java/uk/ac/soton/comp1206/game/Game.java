@@ -536,7 +536,6 @@ public class Game {
     protected int getTimeDelay(){
         
         return Math.max(2500,12000 - 500*level.get());
-
     }
 
     /**
@@ -573,8 +572,6 @@ public class Game {
 
 
             timer.cancel();
-
-            lives.set(3);
 
 
         }

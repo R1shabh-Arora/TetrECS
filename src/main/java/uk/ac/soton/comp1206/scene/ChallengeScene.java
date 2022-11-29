@@ -41,8 +41,6 @@ public class ChallengeScene extends BaseScene {
      */
     private static final Logger logger = LogManager.getLogger(MenuScene.class);
 
-    private final Multimedia multimedia = new Multimedia();
-
     /**
      * An instance of Game class
      */
@@ -258,13 +256,9 @@ public class ChallengeScene extends BaseScene {
     @Override
     public void initialise() {
         logger.info("Initialising Challenge");
-
         game.start();
-        multimedia.enableSound();
-        multimedia.playBackgroundMusic("game.wav");
+        Multimedia.playBackgroundMusic("game.wav");
         game.setOnGameLoop(this::gameLoop);
-
-        multimedia.enableSound();
 
 
         //Here is the main KeyBoard Controls
@@ -298,24 +292,8 @@ public class ChallengeScene extends BaseScene {
      * Taking back to the Menu Scene and cancelling the timer
      */
     public void moveOut(){
-        multimedia.disableAudio();
         gameWindow.startMenu();
         game.timer.cancel();
-
-        // Reset all the Game Values
-        resetGame();
-
-
-    }
-
-    /**
-     * This is a method to reset the game back to its original state
-     */
-    public void resetGame(){
-        Game.score.set(0);
-        Game.lives.set(3);
-        Game.level.set(0);
-        Game.multiplier.set(1);
     }
 
     /**
